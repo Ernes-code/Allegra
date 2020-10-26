@@ -1,0 +1,28 @@
+﻿@model Alegra.App.ViewModels.ExerciseViewModel
+@{
+    ViewData["Title"] = "Exersice";
+}
+<h1>@ViewData["Title"]</h1>
+
+<p>Add User Exersice</p>
+<section class="row">
+    <section class="col-md-4">
+        <form method="post" role="form">
+            <section class="form-group">
+                <input type="text" class="form-control" asp-for="UserId" id="userId" placeholder="userId" name="userId">
+            </section>
+            <section class="form-group">
+                <input type="text" class="form-control" asp-for="Description" id="description" placeholder="description" name="description">
+            </section>
+            <section class="form-group">
+                <input type="number" class="form-control" asp-for="Duration" id="weight" placeholder="duration" name="duration">
+            </section>
+            <section class="form-group">
+                <input type="date" class="form-control" asp-for="Date" id="date" placeholder="date" name="date">
+            </section>
+            <section class="form-group">
+                <input asp-action="AddExercise" asp-controller="UserExercise" type="submit" value="Submit" class="btn btn-primary" />
+            </section>
+        </form>
+    </section>
+</section>

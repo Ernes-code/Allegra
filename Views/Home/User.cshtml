@@ -1,0 +1,21 @@
+﻿@model Alegra.App.ViewModels.UserViewModel
+@{
+    ViewData["Title"] = "User";
+}
+
+<div class="text-center">
+    <p>Add User</a>.</p>
+</div>
+
+<section class="row">
+    <section class="col-md-4">
+        <form  method="post" role="form">
+            <section class="form-group">
+                <input type="text" class="form-control" asp-for="Username" id="username" placeholder="username" name="username">
+            </section>
+            <section class="form-group">
+                <input asp-action="AddUser" asp-controller="UserExercise" type="submit" value="Submit" class="btn btn-primary" />
+            </section>
+        </form>
+    </section>
+</section>
